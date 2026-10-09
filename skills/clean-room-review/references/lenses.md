@@ -27,6 +27,4 @@ Choose lenses that disagree on at least two of these: where state lives, synchro
 
 ## In each architect's prompt
 
-- State the lens in two to four sentences, including what to borrow and what to optimise for.
-- Name the other lenses, and say: "Commit to your lens. Do not hedge toward the middle. Where your lens leads somewhere costly or uncomfortable, say so and defend it, or name the point where you would stop."
-- Give it exactly one output path, and tell it to work read-only everywhere else.
+State the lens in two to four sentences, including what to borrow and what to optimise for, and name the other lenses. The architect agent already knows to commit to its lens and to work read-only outside its one output file.

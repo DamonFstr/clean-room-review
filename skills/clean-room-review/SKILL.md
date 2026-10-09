@@ -42,7 +42,7 @@ One question up front costs less than an amendment later. In the session this sk
 The goal is an overview a reviewer can read instead of the code. Read `references/overview.md` for the agent split and the document structure. In outline:
 
 1. Size the build first: commits, lines added per repo split into source, tests and migrations, and how far trunk has moved since the build branched. The numbers decide how you split the work.
-2. Split the research across parallel read-only agents by area. A typical split is: data model and core computation, write paths and background jobs, API and UI, and the author's own design documents. Ask each agent for path:line references, exact numbers, and its concerns.
+2. Split the research across parallel `clean-room-review:researcher` agents by area. Their tools are read-only. A typical split is: data model and core computation, write paths and background jobs, API and UI, and the author's own design documents. Ask each agent for path:line references, exact numbers, and its concerns.
 3. Spot-check every claim the document will rest on before you write it down. A claim about a colleague's work has to be one you ran yourself. Agents miss things too, so say what you found that they did not.
 4. Cover what the build does for users who never turn the feature on (flags off, other markets). Code on shared paths is where a stack does damage before anyone opts in.
 5. End with review questions, each tied to a path:line.
@@ -54,8 +54,8 @@ Read `references/brief-template.md`, `references/lenses.md` and `references/prom
 1. **Write a neutral brief.** Include the problem, the requirements (PRD first), pointers into the platform, the org constraints and an explicit off-limits list. The off-limits list covers the existing build's branches and worktrees, its design documents, and any TDD or scope page about it in the user's document tools. Copy the allowed requirement pages into a separate folder, so no architect ever has to open a folder that also holds off-limits material.
 2. **Pick 4 lenses that pull apart,** using `references/lenses.md`. Tell each architect that the other lenses exist and that it should commit to its own instead of hedging toward the middle.
 3. **Fix the output shape.** Each design opens with a summary of at most 150 words and a table of its top 5 decisions with the alternatives it rejected. Then it gives the target model for the full problem, and only after that the v1 cut. It stays under 4,000 words, cites path:line, uses exact numbers and states its scale assumptions. Asking for the v1 cut first pulls designs toward incrementalism before the target is drawn.
-4. **Launch the architects in parallel.** While they run, verify the platform facts that more than one design is likely to lean on.
-5. **Judge with a fresh agent that has never seen the existing build.** You, the orchestrator, have seen it, so if you merge the designs yourself you will anchor on it. The judge:
+4. **Launch four `clean-room-review:architect` agents in parallel**, one per lens. While they run, verify the platform facts that more than one design is likely to lean on.
+5. **Judge with a fresh `clean-room-review:judge` agent, which has never seen the existing build.** You, the orchestrator, have seen it, so if you merge the designs yourself you will anchor on it. The judge:
     1. scores each design on fixed criteria;
     2. lists where the designs agree, because agreement between independent designs is a strong signal;
     3. rules on each disagreement;

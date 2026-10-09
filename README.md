@@ -21,7 +21,7 @@ As a plugin:
 
 If the repo is private, you need read access. Claude Code clones it with your existing git credentials, for example through `gh auth login`.
 
-To install only the skill, copy `skills/clean-room-review/` to `~/.claude/skills/clean-room-review/`.
+Install it as a plugin, not by copying the skill folder: the skill launches the plugin's agents, and a copied skill does not bring them along.
 
 ## Use
 
@@ -32,12 +32,15 @@ Phase 2 launches five agents that each read code for a while, so expect it to co
 ## Layout
 
 ```
+agents/researcher.md          read-only mapping of one area (phase 1)
+agents/architect.md           one design through one lens (phase 2)
+agents/judge.md               scores designs, verifies claims, picks the target (phase 2)
 skills/clean-room-review/
   SKILL.md                    workflow
   references/overview.md      phase 1 agent split and document structure
   references/brief-template.md
   references/lenses.md
-  references/prompts.md       architect, judge and adversarial prompts
+  references/prompts.md       per-run prompt fields for each agent
   references/delta.md
   scripts/diff_by_area.py     lines added per area, split into source and tests
 ```
