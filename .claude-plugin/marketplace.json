@@ -1,0 +1,16 @@
+{
+  "name": "clean-room-review",
+  "owner": {
+    "name": "Damon Foster"
+  },
+  "metadata": {
+    "description": "Architecture-level review of large builds: map, clean-room redesign, delta."
+  },
+  "plugins": [
+    {
+      "name": "clean-room-review",
+      "source": ".",
+      "description": "Review a large existing build at the architecture level: map it, redesign from the spec with forced-lens architects and a blind judge, then compare."
+    }
+  ]
+}

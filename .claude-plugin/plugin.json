@@ -1,0 +1,6 @@
+{
+  "name": "clean-room-review",
+  "description": "Review a large existing build at the architecture level: map it, redesign from the spec with forced-lens architects and a blind judge, then compare.",
+  "version": "0.1.0",
+  "author": { "name": "Damon Foster" }
+}
